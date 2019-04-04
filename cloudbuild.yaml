@@ -10,7 +10,7 @@ steps:
   args: [ 'app', 'deploy', '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/' ]
   env: [ 'DOTNETPATH=HelloWorld' ]
 
-artifacts:
-  objects:
-    location: 'gs://stg-sviridov/dotnettest'
-    paths: '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/*'
+# artifacts:
+#   objects:
+#     location: 'gs://stg-sviridov/dotnettest'
+#     paths: '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/*'
