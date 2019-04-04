@@ -5,12 +5,12 @@ steps:
   args: [ 'publish', '-c', 'Release' ]
   dir: 'HelloWorld'
   env: [ 'DOTNETPATH=HelloWorld' ]
-#
-# - name: "gcr.io/cloud-builders/gcloud"
-#   args: [ 'app', 'deploy', '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/' ]
-#   env: 'DOTNETPATH=HelloWorld'
 
-# artifacts:
-#   objects:
-#     location: 'gs://stg-sviridov/dotnettest'
-#     paths: '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/*'
+- name: "gcr.io/cloud-builders/gcloud"
+  args: [ 'app', 'deploy', '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/' ]
+  env: [ 'DOTNETPATH=HelloWorld' ]
+
+artifacts:
+  objects:
+    location: 'gs://stg-sviridov/dotnettest'
+    paths: '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/*'
