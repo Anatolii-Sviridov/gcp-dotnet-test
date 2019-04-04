@@ -15,4 +15,4 @@ resources:
 
 env_variables:
   # The __ in My__Greeting will be translated to a : by ASP.NET.
-  My__Greeting: Hello AppsEngine!
+  My__Greeting: Hello AppssEngine!

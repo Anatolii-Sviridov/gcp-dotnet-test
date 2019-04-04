@@ -7,7 +7,7 @@ steps:
   env: [ 'DOTNETPATH=HelloWorld' ]
 
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: [ 'app', 'deploy', '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/' ]
+  args: [ 'app', 'deploy', '/workspace/HelloWorld/bin/Release/netcoreapp2.1/publish/', '--stop-previous-version', '-v=10' ]
   env: [ 'DOTNETPATH=HelloWorld' ]
 
 artifacts:
